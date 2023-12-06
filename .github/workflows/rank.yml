@@ -1,4 +1,4 @@
-name: Schedule g01
+name: rank check
 
 on:
   schedule:
