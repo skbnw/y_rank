@@ -32,7 +32,7 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name):
         if not os.path.exists(folder_name):
             os.makedirs(folder_name)
         filename = os.path.join(folder_name, f"{scrape_time.strftime('%Y_%m%d_%H%M')}_rank_{genre_en}.csv")
-        df = pd.DataFrame(news_data, columns=['Scrape Time', 'Genre EN', 'Genre JP', 'Rank', 'Media', 'Title', 'Link', 'Date'])
+        df = pd.DataFrame(news_data, columns=['rank_time', 'genre_en', 'genre_jp', 'Rank', 'media_jp', 'title', 'link', 'date_original'])
         df.to_csv(filename, index=False)
         print(f"CSV file saved as {filename}")
 
