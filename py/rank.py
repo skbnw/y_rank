@@ -26,7 +26,7 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name):
             media = item.select_one('.newsFeed_item_media').text
             date = item.select_one('.newsFeed_item_date').text
             link = item.select_one('.newsFeed_item_link')['href']
-            news_data.append([scrape_time.strftime('%Y-%m-%d %H:%M'), genre_en, genre_jp, rank, media, title, link, date])
+            news_data.append([scrape_time.strftime('%Y-%m-%d-%H:%M'), genre_en, genre_jp, rank, media, title, link, date])
 
         # CSVファイルに保存
         if not os.path.exists(folder_name):
