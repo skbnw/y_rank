@@ -55,7 +55,7 @@ genres = [
 scrape_time = get_japan_time()
 
 # 保存先フォルダ名（日本時間の年月日）
-folder_name = scrape_time.strftime('%Y_%m%d_rank')
+folder_name = os.path.join('data_rank', scrape_time.strftime('%Y_%m%d_rank'))
 
 # 各ジャンルのニュースをスクレイプしてCSVに保存
 for url, genre_en, genre_jp in genres:
