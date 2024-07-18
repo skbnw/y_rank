@@ -21,18 +21,33 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
         news_data = []
 
         for item in news_items:
-            rank = item.select_one('.newsFeed_item_rankNum').text
-            title = item.select_one('.newsFeed_item_title').text
-            media = item.select_one('.newsFeed_item_media').text
-            date = item.select_one('.newsFeed_item_date').text
-            link = item.select_one('.newsFeed_item_link')['href']
-            news_data.append([scrape_datetime.strftime('%Y-%m-%d'), scrape_datetime.strftime('%H:%M'), genre_en, genre_jp, rank, media, title, link, date])
+            rank_element = item.select_one('.newsFeed_item_rankNum')
+            title_element = item.select_one('.newsFeed_item_title')
+            media_element = item.select_one('.newsFeed_item_media')
+            date_element = item.select_one('.newsFeed_item_date')
+            link_element = item.select_one('.newsFeed_item_link')
+            
+            rank = rank_element.text if rank_element else "No rank"
+            title = title_element.text if title_element else "No title"
+            media = media_element.text if media_element else "No media"
+            date = date_element.text if date_element else "No date"
+            link = link_element['href'] if link_element else "No link"
+
+            news_data.append([
+                scrape_datetime.strftime('%Y-%m-%d'), 
+                scrape_datetime.strftime('%H:%M'), 
+                genre_en, genre_jp, 
+                rank, media, title, 
+                link, date
+            ])
 
         # CSVファイルに保存
         if not os.path.exists(folder_name):
             os.makedirs(folder_name)
         filename = os.path.join(folder_name, f"{scrape_datetime.strftime('%Y_%m%d_%H%M')}_rank_{genre_en}.csv")
-        df = pd.DataFrame(news_data, columns=['scrp_date', 'scrp_time', 'genre_en', 'genre_jp', 'rank', 'media_jp', 'title', 'link', 'date_original'])
+        df = pd.DataFrame(news_data, columns=[
+            'scrp_date', 'scrp_time', 'genre_en', 'genre_jp', 'rank', 'media_jp', 'title', 'link', 'date_original'
+        ])
         df.to_csv(filename, index=False)
         print(f"CSV file saved as {filename}")
 
@@ -51,12 +66,12 @@ genres = [
     ("https://news.yahoo.co.jp/ranking/access/news/life", "life", "ライフ"),
     ("https://news.yahoo.co.jp/ranking/access/news/local", "local", "地域")
 ]
+
 # スクレイプ実行時間（日本時間）
 scrape_time = get_japan_time()
 
 # 保存先フォルダ名（日本時間の年月日、'data_rank'フォルダ内のサブフォルダとして）
 folder_name = scrape_time.strftime('%Y_%m%d_rank')
-
 
 # 各ジャンルのニュースをスクレイプしてCSVに保存
 for url, genre_en, genre_jp in genres:
