@@ -23,15 +23,26 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
         for item in news_items:
             rank_element = item.select_one('.newsFeed_item_rankNum')
             title_element = item.select_one('.newsFeed_item_title')
-            media_element = item.select_one('.sc-1hy2mez-2.bxHcLf')
+            media_element = item.select_one('.newsFeed_item_sub span')
             date_element = item.select_one('.newsFeed_item_date')
             link_element = item.select_one('.newsFeed_item_link')
 
-            rank = rank_element.text if rank_element else "No rank"
-            title = title_element.text if title_element else "No title"
-            media = media_element.text if media_element else "No media"
-            date = date_element.text if date_element else "No date"
-            link = link_element['href'] if link_element else "No link"
+            if not rank_element:
+                raise ValueError("Rank element not found")
+            if not title_element:
+                raise ValueError("Title element not found")
+            if not media_element:
+                raise ValueError("Media element not found")
+            if not date_element:
+                raise ValueError("Date element not found")
+            if not link_element:
+                raise ValueError("Link element not found")
+
+            rank = rank_element.text
+            title = title_element.text
+            media = media_element.text
+            date = date_element.text
+            link = link_element['href']
 
             news_data.append([
                 scrape_datetime.strftime('%Y-%m-%d'), 
@@ -53,6 +64,10 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
 
     except requests.RequestException as e:
         print(f"Error: {e}")
+        raise
+    except Exception as e:
+        print(f"Scraping error: {e}")
+        raise
 
 # URLとジャンルのリスト
 genres = [
@@ -74,6 +89,10 @@ scrape_time = get_japan_time()
 folder_name = scrape_time.strftime('%Y_%m%d_rank')
 
 # 各ジャンルのニュースをスクレイプしてCSVに保存
-for url, genre_en, genre_jp in genres:
-    scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_time)
-    time.sleep(3)  # 3秒間の休止
+try:
+    for url, genre_en, genre_jp in genres:
+        scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_time)
+        time.sleep(3)  # 3秒間の休止
+except Exception as e:
+    print(f"Process stopped due to error: {e}")
+    exit(1)
