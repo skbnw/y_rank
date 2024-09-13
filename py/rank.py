@@ -31,10 +31,17 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             # ランクを取得
             rank_element = item.select_one('span.sc-1hy2mez-8')  # ランクはspanタグの中にあります
 
-            # 各要素が見つからない場合にスキップ
-            if not title_element or not media_element or not date_element or not link_element or not rank_element:
-                print(f"Warning: Missing element in item {idx + 1}. Skipping this item.")
-                continue
+            # 要素が見つからない場合はエラーを発生させて停止
+            if not rank_element:
+                raise ValueError(f"Rank element not found for item {idx + 1}")
+            if not title_element:
+                raise ValueError(f"Title element not found for item {idx + 1}")
+            if not media_element:
+                raise ValueError(f"Media element not found for item {idx + 1}")
+            if not date_element:
+                raise ValueError(f"Date element not found for item {idx + 1}")
+            if not link_element:
+                raise ValueError(f"Link element not found for item {idx + 1}")
 
             title = title_element.text.strip()
             media = media_element.text.strip()
@@ -66,8 +73,10 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
 
     except requests.RequestException as e:
         print(f"Error: {e}")
+        raise
     except Exception as e:
         print(f"Scraping error: {e}")
+        raise
 
 # URLとジャンルのリスト
 genres = [
