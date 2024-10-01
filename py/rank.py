@@ -28,10 +28,10 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             date_element = item.select_one('.newsFeed_item_sub time')
             # リンクを取得
             link_element = item.select_one('a.newsFeed_item_link')
-            # ランクを取得
-            rank_element = item.select_one('span.sc-1hy2mez-11.hZYeoA')  # ランク要素のクラス名を修正
+            # ランクを取得（クラス名が異なる場合の可能性を考慮）
+            rank_element = item.select_one('span.sc-1hy2mez-11.hZYeoA')  # 修正：ランク要素のクラス名を確認
 
-            # 要素が見つからない場合でも、スクリプトが停止しないようにcontinueでスキップ
+            # 要素が見つからない場合でも、スキップするように変更
             if not rank_element:
                 print(f"Warning: Rank element not found for item {idx + 1}, skipping...")
                 continue
@@ -54,6 +54,9 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             date = date_element.text.strip()
             link = link_element['href'].strip()
             rank = rank_element.text.strip()
+
+            # デバッグ: 取得したランクを出力して確認
+            print(f"Debug: Rank for item {idx + 1}: {rank}")
 
             # リンクが相対パスの場合、絶対パスに変換
             if not link.startswith('http'):
