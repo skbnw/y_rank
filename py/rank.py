@@ -25,7 +25,7 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             title_element = item.select_one('.sc-3ls169-0.dHAJpi')
             # メディアと日付を取得
             media_element = item.select_one('.sc-n3vj8g-0.yoLqH span')
-            date_element = item.find('time', class_='sc-ioshdi-1.faCsgc')
+            date_element = item.select_one('time')  # <time> タグを直接取得
             # リンクを取得
             link_element = item.find('a', class_='sc-1gg21n8-0.cDTGMJ')
             # ランクを取得：<span class="sc-1hy2mez-11">の部分
