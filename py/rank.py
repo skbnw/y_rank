@@ -17,35 +17,23 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
         response = requests.get(url)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
-        news_items = soup.select('.newsFeed_item')  # 各ニュースアイテムを取得
+        news_items = soup.select('.newsFeed_item_body')  # Changed selector to match the provided HTML
         news_data = []
 
-        for idx, item in enumerate(news_items):
+        for idx, item in enumerate(news_items, 1):
             # タイトルを取得
             title_element = item.select_one('.sc-3ls169-0.dHAJpi')
             # メディアと日付を取得
-            media_element = item.select_one('.sc-n3vj8g-0.yoLqH span')
-            date_element = item.select_one('time')  # <time> タグを直接取得
-            # リンクを取得
-            link_element = item.find('a', class_='sc-1gg21n8-0.cDTGMJ')
-            # ランクを取得：<span class="sc-1hy2mez-11">の部分
-            rank_element = item.select_one('span.sc-1hy2mez-11')
+            media_element = item.select_one('.sc-1hy2mez-3.gNVspC')
+            date_element = item.select_one('time')
+            # リンクを取得 (親要素の <a> タグを探す)
+            link_element = item.find_parent('a')
+            # ランクを取得 (親要素から探す)
+            rank_element = item.find_parent().select_one('.sc-1hy2mez-11')
 
             # 要素が見つからない場合の処理
-            if not title_element:
-                print(f"Warning: Title element not found for item {idx + 1}, skipping...")
-                continue
-            if not media_element:
-                print(f"Warning: Media element not found for item {idx + 1}, skipping...")
-                continue
-            if not date_element:
-                print(f"Warning: Date element not found for item {idx + 1}, skipping...")
-                continue
-            if not link_element:
-                print(f"Warning: Link element not found for item {idx + 1}, skipping...")
-                continue
-            if not rank_element:
-                print(f"Warning: Rank element not found for item {idx + 1}, skipping...")
+            if not all([title_element, media_element, date_element, link_element, rank_element]):
+                print(f"Warning: Some elements not found for item {idx}, skipping...")
                 continue
 
             # 各要素のテキストを取得
@@ -56,7 +44,7 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             rank = rank_element.text.strip()
 
             # デバッグ: 取得したランクを出力して確認
-            print(f"Debug: Rank for item {idx + 1}: {rank}")
+            print(f"Debug: Rank for item {idx}: {rank}")
 
             # リンクが相対パスの場合、絶対パスに変換
             if not link.startswith('http'):
@@ -88,7 +76,6 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
         print(f"Error: {e}")
     except Exception as e:
         print(f"Scraping error: {e}")
-
 # URLとジャンルのリスト
 genres = [
     ("https://news.yahoo.co.jp/ranking/access/news", "TTL", "総合"),
