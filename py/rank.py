@@ -22,12 +22,12 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
 
         for idx, item in enumerate(news_items):
             # タイトルを取得
-            title_element = item.select_one('.newsFeed_item_title')
+            title_element = item.select_one('.sc-3ls169-0.dHAJpi')
             # メディアと日付を取得
-            media_element = item.select_one('.newsFeed_item_sub span')
-            date_element = item.select_one('.newsFeed_item_sub time')
+            media_element = item.select_one('.sc-n3vj8g-0.yoLqH span')
+            date_element = item.select_one('.sc-ioshdi-1.faCsgc')
             # リンクを取得
-            link_element = item.select_one('a.newsFeed_item_link')
+            link_element = item.find('a', class_='sc-1gg21n8-0.cDTGMJ')
             # ランクを取得：<span class="sc-1hy2mez-11">の部分
             rank_element = item.select_one('span.sc-1hy2mez-11')
 
