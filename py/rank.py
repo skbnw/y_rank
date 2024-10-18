@@ -32,9 +32,6 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
             rank_element = item.select_one('span.sc-1hy2mez-11')
 
             # 要素が見つからない場合の処理
-            if not rank_element:
-                print(f"Warning: Rank element not found for item {idx + 1}, skipping...")
-                continue
             if not title_element:
                 print(f"Warning: Title element not found for item {idx + 1}, skipping...")
                 continue
@@ -46,6 +43,9 @@ def scrape_and_save_news(url, genre_en, genre_jp, folder_name, scrape_datetime):
                 continue
             if not link_element:
                 print(f"Warning: Link element not found for item {idx + 1}, skipping...")
+                continue
+            if not rank_element:
+                print(f"Warning: Rank element not found for item {idx + 1}, skipping...")
                 continue
 
             # 各要素のテキストを取得
