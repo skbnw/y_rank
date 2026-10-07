@@ -15,7 +15,17 @@ jobs:
           python-version: '3.8'
 
       - name: Install dependencies
-        run: pip install pandas requests beautifulsoup4 pytz boto3
+        run: |
+          # PyPI への一時的な接続タイムアウト対策として、pip 自体のリトライに加え最大3回まで再試行する
+          for i in 1 2 3; do
+            pip install --retries 10 --timeout 60 pandas requests beautifulsoup4 pytz boto3 && break
+            if [ "$i" -eq 3 ]; then
+              echo "pip install failed after $i attempts"
+              exit 1
+            fi
+            echo "pip install failed (attempt $i), retrying in $((i * 15)) seconds..."
+            sleep $((i * 15))
+          done
       
       - name: Run scraper
         run: python py/rank.py  # スクリプトのパスを更新
