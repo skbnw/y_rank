@@ -1,0 +1,41 @@
+scrp_date,scrp_time,genre_en,genre_jp,rank,media_jp,title,link,date_original
+2026-10-22,16:09,it-science,IT・科学,1,ギズモード・ジャパン,ゆるくでも知っておきたい「PHPの脆弱性」の話。直しておきたい“穴だらけのインターネット”,https://news.yahoo.co.jp/articles/096588a3f1fb86cf220165b52a6f2b12c00540c8,10/22(木) 12:00
+2026-10-22,16:09,it-science,IT・科学,2,窓の杜,「Apache Tomcat」に最大深刻度“CRITICAL”の脆弱性 ～v9 / v10 / v11系統に修正版,https://news.yahoo.co.jp/articles/ede6e253d44c6c022c939c4bc97c41d80ce47e42,10/22(木) 8:30
+2026-10-22,16:09,it-science,IT・科学,3,窓の杜,「PHP」の“致命的”な脆弱性2件が修正、ただちにアップデートを,https://news.yahoo.co.jp/articles/4d8feacc6edcecda61be971530371493967f5be5,10/21(水) 23:46
+2026-10-22,16:09,it-science,IT・科学,4,ITmedia NEWS,AIに200万円渡してネットショップを1年運営させてみた──Alibabaの研究者らがシミュレーション　資産14倍の例も,https://news.yahoo.co.jp/articles/8c45ca3593f05dd792cd16b22ada324346240b3c,10/22(木) 10:00
+2026-10-22,16:09,it-science,IT・科学,5,ITmedia NEWS,高市総理「大至急、PHPパッチ適用を」Xで異例の要請　エンジニアは評価「経営層に伝わる」,https://news.yahoo.co.jp/articles/438186816c2eff420ad2177c8c1239c5fdac7d7a,10/22(木) 6:34
+2026-10-22,16:09,it-science,IT・科学,6,読売新聞（ヨミドクター）,生まれるときに体を間違えてしまった　17歳で乳房切除　心は男でも女でもなく、無性別の体になりたかった,https://news.yahoo.co.jp/articles/7380c9d179097e3a6fa106c9bf5c595685ff1260,10/22(木) 11:40
+2026-10-22,16:09,it-science,IT・科学,7,Medical Note,人は血管とともに老いる――症状がないうちから、生活習慣病と向き合う理由,https://news.yahoo.co.jp/articles/3bede7b7917f747ce5a9e1280a37432b60ecbe59,10/22(木) 13:50
+2026-10-22,16:09,it-science,IT・科学,8,アスキー,「もう既存金融は長くない」JPYC代表が警鐘　金融機関への不正アクセス報道を受け,https://news.yahoo.co.jp/articles/0eee3aa17dfe4eeac2c24b4b8850295566f044d0,10/22(木) 14:55
+2026-10-22,16:09,it-science,IT・科学,9,アスキー,36万円超の折りたたみiPhone、買う価値はある？　1週間使って分かった「不満だらけでも欲しい」理由,https://news.yahoo.co.jp/articles/de158d7dc7353ea70f6a0de517dd232b118c328a,10/22(木) 14:00
+2026-10-22,16:09,it-science,IT・科学,10,アスキー,PHPの脆弱性を狙う攻撃、数百万件に急増　公表からわずか2時間で数十万件、Cloudflareが報告,https://news.yahoo.co.jp/articles/e07105417bffdef71ac3e664d5ca6ded93451b1c,10/22(木) 14:30
+2026-10-22,16:09,it-science,IT・科学,11,ITmedia NEWS,漢検運営が「AIで生成」画像で漢字ミス→謝罪　「これを出そうって神経が分からない」の声も,https://news.yahoo.co.jp/articles/b62c4bc6e852f1f8f104e611d2aab1c0e7878163,10/22(木) 11:36
+2026-10-22,16:09,it-science,IT・科学,12,ITmedia NEWS,人型ロボが“車を破壊”　中国Unitreeが動画公開　高さ4mからの飛び降りも,https://news.yahoo.co.jp/articles/fd8a6f32b33c2497ebb6fd9c8fdfd4e6a69510c9,10/22(木) 11:53
+2026-10-22,16:09,it-science,IT・科学,13,ITmedia エンタープライズ,Oracle Javaに55件の脆弱性　IPAが「早急に適用を」と促す対象は,https://news.yahoo.co.jp/articles/45e0b699227740e27e04f2df3068f35c656fb934,10/22(木) 13:31
+2026-10-22,16:09,it-science,IT・科学,14,ケータイ Watch,楽天市場が一部ページで緊急メンテ、その他の企業サイト・サービスも続々メンテ　21日夜～,https://news.yahoo.co.jp/articles/65f1c95bd0770bed502f413fb2e0dc259eb4c874,10/22(木) 0:34
+2026-10-22,16:09,it-science,IT・科学,15,窓の杜,「Node.js」にセキュリティ更新 ～10件の脆弱性を修正、「eMudhra」の侵害にも対応,https://news.yahoo.co.jp/articles/494249ad1366923b9598f3d6feeb112188229bd5,10/22(木) 9:35
+2026-10-22,16:09,it-science,IT・科学,16,Web担当者Forum,"なぜ、パスワード入力フォームは <input type=""text"">ではダメなのか？",https://news.yahoo.co.jp/articles/731d5295416467885f3224c108803b23664a875f,10/22(木) 15:18
+2026-10-22,16:09,it-science,IT・科学,17,J-CASTニュース,PHP重大脆弱性で影響さまざま、各社対応に追われる　「古い仕組みのため十分な対策がとれず」...終了するゲームも,https://news.yahoo.co.jp/articles/f8deafd6df3b015c6a378619908d4c1b09a1af1d,10/22(木) 15:01
+2026-10-22,16:09,it-science,IT・科学,18,アスキー,大阪大学、約7万8000人分の個人情報漏えい　NECが契約に基づかずクラウドで共有,https://news.yahoo.co.jp/articles/bda291e9dd772da3a2b20395ed59899f9662d179,10/22(木) 14:20
+2026-10-22,16:09,it-science,IT・科学,19,アスキー,Google Chromeに350件以上の脆弱性　最新版にアップデートを,https://news.yahoo.co.jp/articles/033ba2b6f2dc1e9906dc510781c7eac12637263d,10/21(水) 15:50
+2026-10-22,16:09,it-science,IT・科学,20,メディカルドック,【訃報】俳優・声優の土田大さん 「心不全」になりやすい人の特徴や初期症状を医師が解説,https://news.yahoo.co.jp/articles/d0a2c8e3fb2de2daf2bc7b8a89739febfb40a23c,10/20(火) 16:56
+2026-10-22,16:09,it-science,IT・科学,21,EE Times Japan,パナソニック、ガラス型ペロブスカイト太陽電池を発売,https://news.yahoo.co.jp/articles/a8786a03de825d714152271e08ba0916438b86ba,10/22(木) 15:00
+2026-10-22,16:09,it-science,IT・科学,22,PC Watch,深刻度9.2のPHP脆弱性「PHP2Shell」、OpenAIが影響確認ツール公開,https://news.yahoo.co.jp/articles/d1e972c98561178851c65f0097ec907322d137a2,10/22(木) 14:14
+2026-10-22,16:09,it-science,IT・科学,23,PC Watch,本来116桁の秘密鍵がたった3桁 インド認証局の一部中間CA証明書にミス,https://news.yahoo.co.jp/articles/dd15b2e5f3ac6570f822e288a8afe17f6193c681,10/22(木) 6:43
+2026-10-22,16:09,it-science,IT・科学,24,ITmedia NEWS,PHPの脆弱性、OpenAIのAIで発見　「同様の発見、今後数カ月で急増」,https://news.yahoo.co.jp/articles/5d375ba62b0fc0c6cf876ea7f5a322d2973da453,10/22(木) 1:14
+2026-10-22,16:09,it-science,IT・科学,25,朝日新聞,国内最大のジュラ紀の恐竜足跡70cm、竜脚類か　福島で化石発見,https://news.yahoo.co.jp/articles/95e5e5f46b04470f6a2b1e48d8cecf2ba3f10cd2,10/22(木) 13:00
+2026-10-22,16:09,it-science,IT・科学,26,ITmedia NEWS,PHPに「緊急」レベルの脆弱性2件　修正版を日本時間21日深夜に公開へ、事前準備を呼び掛け,https://news.yahoo.co.jp/articles/e00101d8f14c5db14ef1ee6e56e2dbcf816ec2e3,10/21(水) 18:30
+2026-10-22,16:09,it-science,IT・科学,27,ITmedia Mobile,ドコモが一部サイトで緊急メンテナンス、現在は完了　不正アクセスは確認されず,https://news.yahoo.co.jp/articles/9e6a90a1326d41769334a84a6e745d3d7bec9d3e,10/22(木) 11:59
+2026-10-22,16:09,it-science,IT・科学,28,INTERNET Watch,インドの認証局eMudhraで秘密鍵の欠陥が明らかに。ユーザーができる対策はOSやブラウザーのアップデート,https://news.yahoo.co.jp/articles/f17b93dfed8966b78da92e6201289e585862ec42,10/22(木) 13:36
+2026-10-22,16:09,it-science,IT・科学,29,sorae 宇宙へのポータルサイト,JAXAが火星衛星探査機「MMX」の初期クリティカル運用フェーズ終了を発表,https://news.yahoo.co.jp/articles/abcbd9d911cc004981548df6c51e45c60c8a7ef8,10/22(木) 11:42
+2026-10-22,16:09,it-science,IT・科学,30,アスキー,イオン、グループ各社のWebサイトで不正アクセスを確認　個人情報流出の有無を調査中,https://news.yahoo.co.jp/articles/32a84919f3d40fdd91597df2043c1bb94d7f9cf3,10/21(水) 17:00
+2026-10-22,16:09,it-science,IT・科学,31,窓の杜,「PHP」に“致命的”な脆弱性2件、日本時間21日深夜に緊急のセキュリティリリースへ【15時20分追記】,https://news.yahoo.co.jp/articles/f5a2787f824a8de5908994e2180bcd0e605c6547,10/21(水) 13:52
+2026-10-22,16:09,it-science,IT・科学,32,ITmedia NEWS,認証局eMudhraの中間証明書、秘密鍵が「数ミリ秒」で復元可能な脆弱性　大手各社が緊急遮断,https://news.yahoo.co.jp/articles/b6a7c30f8556f696cc1df39bc87842f1b9521fe0,10/21(水) 9:24
+2026-10-22,16:09,it-science,IT・科学,33,INTERNET Watch,ソフトバンク、一時停止していた「My SoftBank」サイトを再開,https://news.yahoo.co.jp/articles/599fd43bb25b2356eb9942352c7515799b76cb7b,10/22(木) 15:05
+2026-10-22,16:09,it-science,IT・科学,34,INTERNET Watch,バルテック、「PHPの脆弱性を標的としたサイバー攻撃」によりサービス停止、情報流出の可能性,https://news.yahoo.co.jp/articles/fabadade575ae5ad3695d2d3a5f409b5c2bdc9ff,10/22(木) 15:28
+2026-10-22,16:09,it-science,IT・科学,35,ネットショップ担当者フォーラム,「タイパ」の次は「メンパ」の時代がくる？ 「選択時の判断疲れ」で約6割の女性がメンタルパフォーマンス低下を実感→「チョイパ」ニーズが向上,https://news.yahoo.co.jp/articles/b69f41ccc0c6ac3bd6db6cca22e0b4faeda8868f,10/22(木) 15:31
+2026-10-22,16:09,it-science,IT・科学,36,時事通信,ロシアの研究所で起きたペスト騒動 ～どこまで心配な出来事か～【東京医科大客員教授・濱田篤郎】,https://news.yahoo.co.jp/articles/2276fac919ff7c72be6e04c1c2a45b3681e35aba,10/22(木) 14:00
+2026-10-22,16:09,it-science,IT・科学,37,窓の杜,どうせ漏れるなら、自分から先にウソを漏らして対抗！　「個人情報先出しシステム」,https://news.yahoo.co.jp/articles/bf6e65ab26141485ec42285730ae8e0b2cff85c2,10/21(水) 16:45
+2026-10-22,16:09,it-science,IT・科学,38,ITmedia NEWS,旅行ゲーム「ワールドクエスト」、PHP脆弱性で即日サービス終了　「古い仕組みのため対策とれず」,https://news.yahoo.co.jp/articles/41a3405871c86fe65af46366f3bcb9b129cd5b93,10/22(木) 11:05
+2026-10-22,16:09,it-science,IT・科学,39,ギズモード・ジャパン,富士登山用のはずが、街で愛用中。3カ月着てわかったモンベル「ストームクルーザー」の実力,https://news.yahoo.co.jp/articles/8dda00c5713650e0c574da056bb4c6c0734b484c,10/21(水) 22:00
+2026-10-22,16:09,it-science,IT・科学,40,ギズモード・ジャパン,グーグルが「AI画像判定ツール」を公開。これでフェイク画像は撲滅でき…ない理由,https://news.yahoo.co.jp/articles/ae63fbf9b4c7198b85e15e2681859f6a004c811f,10/22(木) 11:30
